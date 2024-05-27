@@ -1,5 +1,5 @@
 
-console.log('hello world');
+
 
 let computer_choice = function(){
     let randfloat = Math.random();
@@ -46,6 +46,7 @@ let playRound = function(h, c){
             case (c=='scissors'):
                 outcome = 'w';
                 break;
+
         }
     }
 
@@ -61,6 +62,7 @@ let playRound = function(h, c){
             case (c=='scissors'):
                 outcome = 'l';
                 break;
+
         }
     } 
     else{
@@ -75,24 +77,48 @@ let playRound = function(h, c){
             case (c=='scissors'):
                 outcome = 'd';
                 break;
+
         }
     } 
 
     switch(true){
         case (outcome == 'w'):
             humanscore = humanscore+1;
-            console.log(`You win, ${h} beats ${c}`);
+
             break;
         case (outcome == 'l'):
             compscore = compscore +1;
-            console.log(`you lose, ${h} lost to ${c}`);
+
             break;
-        case(outcome=='d'):
-            console.log(`it's a draw, both selected ${h}`);
+        default:
+            break;
+
     }
     
 
 }
 
-playRound(get_human_choice(), computer_choice());
-console.log(`Final scorecard: Human - ${humanscore}, Computer - ${compscore}`);
+let play_game = function(Play_round, hum, com){
+
+    Play_round(hum(), com());
+    Play_round(hum(), com());
+    Play_round(hum(), com());
+    Play_round(hum(), com());
+    Play_round(hum(), com());
+
+    console.log(`Final Scores - You: ${humanscore}, Computer: ${compscore}`)
+    
+    switch(true){
+        case (compscore ==humanscore):
+            console.log('you have drawed with the computer.'
+            );
+            break;
+        case (compscore>humanscore):
+            console.log('you have lost to the computer. Better luck next time.')
+            break;
+        case (compscore<humanscore):
+            console.log('you have beaten the computer, Congradulations')
+    }
+}
+
+play_game(playRound,get_human_choice, computer_choice)
