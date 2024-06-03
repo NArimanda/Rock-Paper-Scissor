@@ -121,4 +121,4 @@ let play_game = function(Play_round, hum, com){
     }
 }
 
-play_game(playRound,get_human_choice, computer_choice)
+play_game(playRound,get_human_choice, computer_choice) 
