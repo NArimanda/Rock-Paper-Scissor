@@ -1,0 +1,17 @@
+body{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: teal;
+}
+
+.Scorecard{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.ScoreDisplay{
+    background-color: purple;
+}
