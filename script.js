@@ -20,12 +20,20 @@ let computer_choice = function(){
     return choice;
 }
 
-
+const Rock_choice = document.querySelector('#rock')
+const Paper_choice = document.querySelector('#paper')
+const Scissor_choice = document.querySelector('#scissors')
 
 
 let get_human_choice = function(){
-    let hum_choi = prompt('Please type "rock", "paper", or "scissors".');
-    return hum_choi.toLocaleLowerCase();
+    let hum_choi;
+    Rock_choice.addEventListener('click', () => {hum_choi = 'rock'})
+    Paper_choice.addEventListener('click', () =>{hum_choi = 'paper'})
+    Scissor_choice.addEventListener('click', () => {hum_choi = 'scissors'})
+    let x;
+    setTimeout((hum_choi) => {x=hum_choi}, 5000)
+    
+    return x;
 }
 
 let humanscore = 0;
