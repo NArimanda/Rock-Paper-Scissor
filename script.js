@@ -20,6 +20,9 @@ let computer_choice = function(){
     return choice;
 }
 
+
+
+
 let get_human_choice = function(){
     let hum_choi = prompt('Please type "rock", "paper", or "scissors".');
     return hum_choi.toLocaleLowerCase();

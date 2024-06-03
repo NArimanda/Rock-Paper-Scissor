@@ -8,10 +8,36 @@ body{
 
 .Scorecard{
     display: flex;
+    gap:10px;
     flex-direction: column;
     background-color: red;
+    padding:50px;
+    height: 100%;
+    align-items: center;
 }
 
 .ScoreDisplay{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
     background-color: purple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.rps{
+    background-color: beige;
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+}
+
+.playerImage{
+    height:250px;
+    width:200px;
+}
+
+.choiceImage{
+    height:50px;
+    width:50px;
 }
